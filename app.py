@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Retrieve the API key from the .env file
-api_key = os.getenv("GOOGLE_API_KEY")
+api_key = st.secrets.API.key
 if not api_key:
     raise ValueError("Google API key not found in environment variables.")
 
